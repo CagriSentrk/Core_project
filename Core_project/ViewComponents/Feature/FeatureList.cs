@@ -15,7 +15,7 @@ namespace Core_project.ViewComponents.Feature
         //component'in en büyük avantajı,partialda ki gibi direkt erişim yok.Yani /Default/FeatureList yazdığınızda erişilmiyor.
         public IViewComponentResult Invoke()
         {
-
+            
             var values = featuremanager.TGetList();
             return View(values);
         }
