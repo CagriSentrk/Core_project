@@ -28,7 +28,8 @@
                         <h2 class="marker marker-center">Contact Me</h2>
                     </div>
                     <div class="row">
-                         @await Component.InvokeAsync("SendMessage")
+                        @* @await Component.InvokeAsync("SendMessage")*@
+                        @await Html.PartialAsync("/Views/Default/SendMessage.cshtml")
                          @await Component.InvokeAsync("ContactDetails")
                    
                     </div>
