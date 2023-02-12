@@ -3,23 +3,24 @@
     ViewData["Title"] = "AddSkill";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
+
+
 <div class="card-header border-0">
-    <h3 class="mb-0">Yetenek Ekle</h3>
+    <h3 class="mb-0">Tecrübe Ekle</h3>
 </div>
 <form class="form-group" method="post">
     <br />
-@Html.Label("Yetenek başlığı")
-<br />
-<input type="text" name="Title" / class="form-control">
-<br />
+    @Html.Label("Yetenek başlığı")
+    <br />
+    <input type="text" name="Title" / class="form-control">
+    <br />
     <label>Değer</label>
     <input type="text" name="Value" class="form-control" />
     <br />
-    <button  class="btn btn-primary">kaydet</button>
+    <button class="btn btn-primary">kaydet</button>
 
 
 
 
 
 </form>
-
