@@ -11,15 +11,27 @@
     <br />
     <label>Proje adı</label>
     <input type="text" name="Name" / class="form-control">
+    @Html.ValidationMessageFor(x=>x.Name)
     <br />
     <label>Resim yolu</label>
     <input type="text" name="ImageUrl" class="form-control" />
+    @Html.ValidationMessageFor(x=>x.ImageUrl)
     <br /> <label>Resim yolu 2</label>
     <input type="text" name="ImageUrl2" class="form-control" />
+    @Html.ValidationMessageFor(x=>x.ImageUrl2)
     <br />
     <label>Proje linki</label>
     <input type="text" name="ProjectUrl" class="form-control" />
+    @Html.ValidationMessageFor(x=>x.ProjectUrl)
     <br />
+    <label>Fiyat</label>
+    <input type="text" name="Price" class="form-control" />
+    @Html.ValidationMessageFor(x=>x.Price)
+    <br /> <label>Tamamlanma oranı</label>
+    <input type="text" name="Value" class="form-control" />
+    @Html.ValidationMessageFor(x=>x.Value)
+    <br />
+
     
    
     <button class="btn btn-primary">kaydet</button>
