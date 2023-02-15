@@ -1,0 +1,51 @@
+﻿@model EntityLayer.Concrete.About
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<div class="card-header border-0">
+    <h3 class="mb-0">Öne çıkan Düzenle</h3>
+</div>
+
+@using (Html.BeginForm("Index", "About", FormMethod.Post))
+{
+
+    <br />
+    @Html.TextBoxFor(x=>x.AboutID,new{@class ="form-control",@readonly="readonly"})
+    <br />
+    @Html.Label("Adres")
+    <br />
+    @Html.TextBoxFor(x=>x.Address, new{@class ="form-control"})
+    <br />
+    @Html.Label("Title")
+    <br />
+    @Html.TextBoxFor(x=>x.Title, new{@class ="form-control"})
+    <br />
+    @Html.Label("Telefon numarası")
+    <br />
+    @Html.TextBoxFor(x=>x.PhoneNumber, new{@class ="form-control"})
+    <br />
+    <br />
+    @Html.Label("Mail")
+    <br />
+    @Html.TextBoxFor(x=>x.Mail, new{@class ="form-control"})
+    <br />
+    @Html.Label("Yaş")
+    <br />
+    @Html.TextBoxFor(x=>x.age, new{@class ="form-control"})
+    <br />
+    @Html.Label("Resim yolu")
+    <br />
+    @Html.TextBoxFor(x=>x.ImageUrl, new{@class ="form-control"})
+    <br />
+    @Html.Label("Açıklama")
+    <br />
+    @Html.TextAreaFor(x=>x.Description,10,3 ,new{@class ="form-control"})
+    <br />
+    <button class="btn btn-primary">kaydet</button>
+
+
+}

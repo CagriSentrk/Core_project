@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "AddService";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Hizmet ekleme Sayfası</h1>
+
+<div class="card-header border-0">
+    <h3 class="mb-0">Hizmet Ekle</h3>
+</div>
+<form class="form-group" method="post">
+    <br />
+    @Html.Label("Başlık")
+    <br />
+    <input type="text" name="Title" class="form-control">
+    <br />
+    <label>Resim yolu</label>
+    <input type="text" name="ImageUrl" class="form-control" />
+    <br />
+    <button class="btn btn-primary">kaydet</button>
+
+
+
+
+
+</form>

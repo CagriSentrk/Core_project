@@ -5,22 +5,21 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Core_project.Controllers
 {
-    public class FeatureController : Controller
+    public class AboutController : Controller
     {
-        FeatureManager featuremanager = new FeatureManager(new EfFeatureDal());
+        AboutManager aboutManager = new AboutManager(new EfAboutDal());
         [HttpGet]
         public IActionResult Index()
         {
-            var values = featuremanager.TGetByID(1);
+            var values = aboutManager.TGetByID(1);
             return View(values);
         }
-    
-        [HttpPost]
-        public IActionResult Index(Feature p)
-        {
-            featuremanager.TUpdate(p);
-            return RedirectToAction("Index","Default");
-        }
 
+        [HttpPost]
+        public IActionResult Index(About p)
+        {
+            aboutManager.TUpdate(p);
+            return RedirectToAction("Index", "Default");
+        }
     }
 }

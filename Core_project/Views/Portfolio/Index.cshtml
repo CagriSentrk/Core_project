@@ -60,9 +60,11 @@
                         </div>
                       </div>
                     </td>
-                  <td><a href="/Portfolio/DeletePortfolio/@item.PortfolioID" class="btn btn-outline-danger">Sil</a></td>
+                                <td>
+  @Html.ActionLink("SİL", "DeletePortfolio",new {id=item.PortfolioID},new { @class= "btn btn-outline-danger",onclick="return confirm('Gerçekten silmek istiyor musunuz?')" })</td>
                   <td><a href="/Portfolio/UpdatePortfolio/@item.PortfolioID" class="btn btn-outline-success">Güncelle</a></td>
                   </tr>
+               
                         }
                 </tbody>
               </table>
