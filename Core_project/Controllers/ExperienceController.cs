@@ -10,7 +10,10 @@ namespace Core_project.Controllers
         ExperienceManager experiencemanager = new ExperienceManager (new EfExperienceDal());
         public IActionResult Index()
         {
-           var values= experiencemanager.TGetList();
+            ViewBag.v1 = "Düzenleme";
+            ViewBag.v2 = "Tecrübe";
+            ViewBag.v3 = "Index";
+            var values= experiencemanager.TGetList();
             return View(values);
         }
         [HttpGet]
@@ -22,6 +25,9 @@ namespace Core_project.Controllers
         [HttpPost]
         public IActionResult AddExperience(Experience p)
         {
+            ViewBag.v1 = "Düzenleme";
+            ViewBag.v2 = "Tecrübe";
+            ViewBag.v3 = "Add";
             experiencemanager.TAdd(p);
             return RedirectToAction("Index");
         }
@@ -37,6 +43,9 @@ namespace Core_project.Controllers
 
         public IActionResult EditExperience(int id)
         {
+            ViewBag.v1 = "Düzenleme";
+            ViewBag.v2 = "Tecrübe";
+            ViewBag.v3 = "Update";
             var values=experiencemanager.TGetByID(id);
             return View(values);
         }

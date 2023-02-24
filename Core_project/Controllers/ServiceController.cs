@@ -10,6 +10,9 @@ namespace Core_project.Controllers
         ServiceManager serviceManager = new ServiceManager(new EfServiceDal());
         public IActionResult Index()
         {
+            ViewBag.v1 = "Düzenleme";
+            ViewBag.v2 = "Servis";
+            ViewBag.v3 = "Index";
             var values = serviceManager.TGetList();
             return View(values);
         }
@@ -21,6 +24,9 @@ namespace Core_project.Controllers
         [HttpPost]
         public IActionResult AddService(Service p)
         {
+            ViewBag.v1 = "Düzenleme";
+            ViewBag.v2 = "Servis";
+            ViewBag.v3 = "Add";
             serviceManager.TAdd(p);
             return RedirectToAction("Index");
         }
@@ -33,6 +39,9 @@ namespace Core_project.Controllers
         [HttpGet]
         public IActionResult EditService(int id)
         {
+            ViewBag.v1 = "Düzenleme";
+            ViewBag.v2 = "Servis";
+            ViewBag.v3 = "Update";
             var values = serviceManager.TGetByID(id);
             return View(values);
         }

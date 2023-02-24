@@ -2,7 +2,7 @@
 @model List<Service>
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
 <div class="card-header border-0">
@@ -48,6 +48,6 @@
             }
         </tbody>
     </table>
-
+    <br />
     <a href="/Service/AddService" class="btn btn-primary"> Yeni hizmet ekle</a>
 </div>

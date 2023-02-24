@@ -29,9 +29,9 @@
                         <tr>
                             <td>@item.ExperienceID</td>
                             <td>@item.Name</td>
-                            <td>@item.Date</td>@*//çıkış yılını ekle*@
-                            <td><a href="#" class="btn btn-outline-danger">Sil</a></td>
-                            <td><a href="#" class="btn btn-outline-success">Güncelle</a></td>
+                                <td>@item.Date.Month/@item.Date.Year- @item.Date2.Month/@item.Date2.Year</td>@*//çıkış yılını ekle*@
+                                <td><a href="/Experience/DeleteExperience/@item.ExperienceID" class="btn btn-outline-danger">Sil</a></td>
+                                <td><a href="/Experience/EditExperience/@item.ExperienceID" class="btn btn-outline-success">Güncelle</a></td>
                            
                           
                         </tr>
@@ -41,7 +41,7 @@
                 </table>
                <br />
             </div>
- <td><a href="#" class="btn btn-outline-success">Yeni Tecrübe ekle</a></td>
+            <td><a href="/Experience/AddExperience/" class="btn btn-outline-success">Yeni Tecrübe ekle</a></td>
         </div>
     </div>
 </div>

@@ -1,19 +1,15 @@
 ﻿@model EntityLayer.Concrete.About
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
-<h1>Index</h1>
-
-<div class="card-header border-0">
-    <h3 class="mb-0">Öne çıkan Düzenle</h3>
-</div>
 
 @using (Html.BeginForm("Index", "About", FormMethod.Post))
 {
 
     <br />
+    @Html.Label("ID")
     @Html.TextBoxFor(x=>x.AboutID,new{@class ="form-control",@readonly="readonly"})
     <br />
     @Html.Label("Adres")

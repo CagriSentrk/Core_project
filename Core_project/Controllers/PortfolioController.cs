@@ -29,6 +29,10 @@ namespace Core_project.Controllers
         [HttpPost]
         public IActionResult AddPortfolio(Portfolio p)
         {
+            ViewBag.v1 = "Proje Listesi";
+            ViewBag.v2 = "Projelerim";
+            ViewBag.v3 = "Proje Listesi";
+
             PortfolioValidator validations = new PortfolioValidator();
             ValidationResult results = validations.Validate(p);
 
@@ -59,6 +63,9 @@ namespace Core_project.Controllers
         [HttpGet]
         public IActionResult UpdatePortfolio(int id)
         {
+            ViewBag.v1 = "Proje Listesi";
+            ViewBag.v2 = "Projelerim";
+            ViewBag.v3 = "Proje Listesi";
             var values = portfolioManager.TGetByID(id);
 
             return View(values);

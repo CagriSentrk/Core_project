@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "EditExperience";
-    Layout = "~/Views/Shared/AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
 
@@ -11,23 +11,28 @@
     <h3 class="mb-0">Tecrübe Düzenle</h3>
 </div>
 
-@using (Html.BeginForm("EditSkill", "Skill", FormMethod.Post))
+@using (Html.BeginForm("EditExperience", "Experience", FormMethod.Post))
 {
 
     <br />
+    <label>ID</label>
     @Html.TextBoxFor(x=>x.ExperienceID,new{@class ="form-control",@readonly="readonly"})
     <br />
-    @Html.Label("Yetenek başlığı")
+    @Html.Label("Kurum adı")
     <br />
     @Html.TextBoxFor(x=>x.Name, new{@class ="form-control"})
-    <br /> @Html.TextBoxFor(x=>x.ImageUrl, new{@class ="form-control"})
     <br />
-    <label>Değer</label>
+    <label>Fotoğraf yolu</label>
+    @Html.TextBoxFor(x=>x.ImageUrl, new{@class ="form-control"})
+    <br />
+    <label>Giriş Tarihi</label>
     @Html.TextBoxFor(x=>x.Date, new{@class ="form-control"})
-    <br /><label>Değer</label>
+    <br />
+    <label>Çıkış TArihi</label>
     @Html.TextBoxFor(x=>x.Date2, new{@class ="form-control"})
-    <br /><label>Değer</label>
-    @Html.TextBoxFor(x=>x.Description, new{@class ="form-control"})
+    <br />
+    <label>Açıklama</label>
+    @Html.TextAreaFor(x=>x.Description, new{@class ="form-control"})
     <br />
     <button class="btn btn-primary">kaydet</button>
 
