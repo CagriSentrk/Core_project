@@ -23,5 +23,9 @@ namespace Core_project.Controllers
         {
             return PartialView();
         }
+        public PartialViewResult NewSiderBar()
+        {
+            return PartialView();
+        }
     }
 }
