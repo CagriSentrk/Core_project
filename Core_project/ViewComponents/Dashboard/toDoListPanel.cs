@@ -1,19 +1,18 @@
 ﻿using BussinesLayer.Concrete;
 using DataAccessLayer.EntityFramework;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Core_project.ViewComponents.Dashboard
 {
-    public class MessageList:ViewComponent
+    public class toDoListPanel:ViewComponent
     {
 
-        UserMessageManager userMessageManager = new UserMessageManager(new EfUserMessageDal());
+        toDoLİstManager toDoLİstManager = new toDoLİstManager(new EftoDoListDal());
         public IViewComponentResult Invoke()
         {
-            var values=userMessageManager.GetUserMessageWithUserService();
-
+            var values = toDoLİstManager.TGetList();
             return View(values);
+
         }
     }
 }
