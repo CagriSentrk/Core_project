@@ -1,4 +1,5 @@
 ﻿using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace DataAccessLayer.Concrete
 {
 
     //Context classı veritabanı yapılandırması içinde ki bağlantı stringini tutar ve veritabanına yansıtılacak tabloları tutacak.
-    public class Context:DbContext
+    public class Context:IdentityDbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) //Bağlantı adresini tutan method.
         {
