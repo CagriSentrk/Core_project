@@ -11,7 +11,7 @@ namespace DataAccessLayer.Concrete
 {
 
     //Context classı veritabanı yapılandırması içinde ki bağlantı stringini tutar ve veritabanına yansıtılacak tabloları tutacak.
-    public class Context:IdentityDbContext
+    public class Context:IdentityDbContext<WriterUser,WriterRole,int>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) //Bağlantı adresini tutan method.
         {
@@ -32,6 +32,7 @@ namespace DataAccessLayer.Concrete
         public DbSet<User> Users { get; set; }
         public DbSet<UserMessage> UserMessages { get; set; }
         public DbSet<ToDoList> toDoLists { get; set; }
+        public DbSet<test1> test1s { get; set; }
 
     }
 }

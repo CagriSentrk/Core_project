@@ -36,6 +36,7 @@ namespace BussinesLayer.Concrete
         public List<About> TGetList()
         {
            return _aboutDal.GetList();
+            
         }
 
         public void TUpdate(About t)
